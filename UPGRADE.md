@@ -9,47 +9,47 @@
 7. 所以输入格式之间的**分号 *;* 均是英文分号**
 
 ##### 示例模板
-今天是{{y_date.DATA}} {{x_date.DATA}}{{weekday.DATA}}
-今日家乡{{city.DATA}}天气：{{we_city.DATA}} 
-当前温度：{{te_city.DATA}} ℃ 
-今日最低气温：{{lo_city.DATA}} ℃ 
-今日最高气温：{{hi_city.DATA}} ℃ 
-空气湿度：{{hu_city.DATA}} 
-今日风向：{{wi_city.DATA}} 
-空气质量：{{ai_city.DATA}} 
-
-今日学校{{city_1.DATA}}天气：{{we_city_1.DATA}} 
-当前温度：{{te_city_1.DATA}} ℃ 
-今日最低气温：{{lo_city_1.DATA}} ℃ 
-今日最高气温：{{hi_city_1.DATA }} ℃ 
-空气湿度：{{hu_city_1.DATA}} 
-今日风向：{{wi_city_1.DATA}} 
-空气质量：{{ai_city_1.DATA}} 
-
-我已经出生{{start.DATA}}天 
-已经相识{{start_1.DATA}}天
-距离你的生日还有{{rec.DATA}} 天 
-距离考试还有{{rec_1.DATA}}天
-
-{{words.DATA}} 
-
---科科 ！
++今天是{{y_date.DATA}} {{x_date.DATA}}{{weekday.DATA}}
++今日家乡{{city.DATA}}天气：{{we_city.DATA}} 
++当前温度：{{te_city.DATA}} ℃ 
++今日最低气温：{{lo_city.DATA}} ℃ 
++今日最高气温：{{hi_city.DATA}} ℃ 
++空气湿度：{{hu_city.DATA}} 
++今日风向：{{wi_city.DATA}} 
++空气质量：{{ai_city.DATA}} 
++
++今日学校{{city_1.DATA}}天气：{{we_city_1.DATA}} 
++当前温度：{{te_city_1.DATA}} ℃ 
++今日最低气温：{{lo_city_1.DATA}} ℃ 
++今日最高气温：{{hi_city_1.DATA }} ℃ 
++空气湿度：{{hu_city_1.DATA}} 
++今日风向：{{wi_city_1.DATA}} 
++空气质量：{{ai_city_1.DATA}} 
++
++我已经出生{{start.DATA}}天 
++已经相识{{start_1.DATA}}天
++距离你的生日还有{{rec.DATA}} 天 
++距离考试还有{{rec_1.DATA}}天
++
++{{words.DATA}} 
++
++--科科 ！
 
 ### 模板说明
-{{y_date.DATA}} 阳历
-{{x_date.DATA}} 农历
-{{weekday.DATA}} 星期（如：周三）
-{{city.DATA}} 城市 （输出格式：**北京**  ***四川-成都*** **江苏-淮安-淮阴区**  三种）
-{{we_city.DATA}} 天气
-{{te_city.DATA}} 当前温度
-{{lo_city.DATA}} 最低温度
-{{hi_city.DATA}}最高温度
-{{hu_city.DATA}}空气湿度
-{{wi_city.DATA}}风向
-{{ai_city.DATA}} 空气质量
-{{start.DATA}}正数纪念（如出生多少天，相识多少天）
-{{rec.DATA}}倒数多少天（如生日还有多少天，xx纪念日还有多少天）
-{{words.DATA}} 每日一句彩虹屁
++{{y_date.DATA}} 阳历
++{{x_date.DATA}} 农历
++{{weekday.DATA}} 星期（如：周三）
++{{city.DATA}} 城市 （输出格式：**北京**  ***四川-成都*** **江苏-淮安-淮阴区**  三种）
++{{we_city.DATA}} 天气
++{{te_city.DATA}} 当前温度
++{{lo_city.DATA}} 最低温度
++{{hi_city.DATA}}最高温度
++{{hu_city.DATA}}空气湿度
++{{wi_city.DATA}}风向
++{{ai_city.DATA}} 空气质量
++{{start.DATA}}正数纪念（如出生多少天，相识多少天）
++{{rec.DATA}}倒数多少天（如生日还有多少天，xx纪念日还有多少天）
++{{words.DATA}} 每日一句彩虹屁
 **模板中的中文可以自定义，{{}}中的英文不能修改，数字可以递增（两个出现数字1,三个就出现2）**
 **温度没输出°C使用者自定义更高（如：今日温度xx~xx°C）**
 **v信字数限制，如果出现未显示完全，可删除一些对自己无用的**
