@@ -10,6 +10,7 @@
 
 ##### 示例模板
 [模板](./模板.txt)
+
 今天是{{y_date.DATA}} {{x_date.DATA}}{{weekday.DATA}}
 
 今日家乡{{city.DATA}}天气：{{we_city.DATA}} 
