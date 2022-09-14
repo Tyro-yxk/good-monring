@@ -1,0 +1,25 @@
+今天是{{y_date.DATA}}{{x_date.DATA}}{{weekday.DATA}}
+今日家乡{{city.DATA}}天气：{{we_city.DATA}} 
+当前温度：{{te_city.DATA}} ℃ 
+今日最低气温：{{lo_city.DATA}} ℃ 
+今日最高气温：{{hi_city.DATA}} ℃ 
+空气湿度：{{hu_city.DATA}} 
+今日风向：{{wi_city.DATA}} 
+空气质量：{{ai_city.DATA}} 
+
+今日学校{{city_1.DATA}}天气：{{we_city_1.DATA}} 
+当前温度：{{te_city_1.DATA}} ℃ 
+今日最低气温：{{lo_city_1.DATA}} ℃ 
+今日最高气温：{{hi_city_1.DATA }} ℃ 
+空气湿度：{{hu_city_1.DATA}} 
+今日风向：{{wi_city_1.DATA}} 
+空气质量：{{ai_city_1.DATA}} 
+
+我已经出生{{start.DATA}}天 
+已经相识{{start_1.DATA}}天
+距离你的生日还有{{rec.DATA}} 天 
+距离考试还有{{rec_1.DATA}}天
+
+{{words.DATA}} 
+
+--科科 ！
