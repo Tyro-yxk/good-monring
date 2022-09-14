@@ -1,17 +1,32 @@
-# 配置文件
+name: morning
+on:
+  schedule:
+  - cron:  '0 0 * * *'
+  workflow_dispatch:
 
-DAILY_TIME: "14:00" # 每日定时发送时间。该时间为系统时间，如果当前系统时间不为北京时间需要自行进行换算
+jobs:
+  send_message:
+    runs-on: ubuntu-latest
+    name: send morning to your girlfriend
 
-START_DATE: "2020-05-20" # 纪念日
-CITY: "北京"
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+      with:
+        ref: master
 
-BIRTHDAY:
-  - "05-21"
+    - name: sender
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+        architecture: 'x64'
+    - run: pip install -r ./requirements.txt && python ./main.py
 
-APP_ID: "微信公众平台的 APP ID"
-APP_SECRET: "微信公众平台的 APP SECRET"
-
-USER_ID: 
-  - "微信公众平台的 USER ID"
-  - "USER ID 2" # 你可以通过配置多个USER_ID来设置多个接受者，如果接受者只有一人删除本行即可
-TEMPLATE_ID: "微信公众平台的 TEMPLATE ID"
+    env:
+      APP_ID: ${{ secrets.APP_ID }}
+      APP_SECRET: ${{ secrets.APP_SECRET }}
+      TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
+      USER_ID: ${{ secrets.USER_ID }}
+      START_DATE: ${{ secrets.START_DATE }}
+      BIRTHDAY: ${{ secrets.BIRTHDAY }}
+      CITY: ${{ secrets.CITY }}
