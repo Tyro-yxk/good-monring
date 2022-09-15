@@ -50,12 +50,6 @@ def weekday():
     return week[date.today().weekday()]
 
 
-def get_ico():
-    with open('a', 'r', encoding="utf8") as f:
-        lines = f.readlines()
-    return lines
-
-
 def get_random_color():
     return "#%06x" % random.randint(0, 0xFFFFFF)
 
@@ -173,13 +167,6 @@ da = {
         "color": get_random_color()
     },
 }
-ico = [x.strip() for x in get_ico() if x.strip()]
-su = ico.__len__()
-for index in range(su):
-    name = "ico" + "_%d" % (index + 1)
-    da[name] = {
-        "value": ico[index]
-    }
 data.update(da)
 
 # count = 0
