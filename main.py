@@ -50,6 +50,12 @@ def weekday():
     return week[date.today().weekday()]
 
 
+def get_ico():
+    with open('a', 'r', encoding="utf8") as f:
+        lines = f.readlines()
+    return lines
+
+
 def get_random_color():
     return "#%06x" % random.randint(0, 0xFFFFFF)
 
@@ -70,6 +76,7 @@ def split_start():  # 多个倒计时通知
     if start_date is None:
         return None
     return start_date.split(";")
+ 
 
 
 client = WeChatClient(app_id, app_secret)
@@ -147,6 +154,7 @@ for index, aim_start in enumerate(split_start()):
         "color": get_random_color()
     }
 
+
 da = {
     "y_date": {  # 日期，阳历
         "value": today.strftime("%Y年%m月%d日"),
@@ -165,6 +173,13 @@ da = {
         "color": get_random_color()
     },
 }
+ico = [x.strip() for x in get_ico() if x.strip()]
+su = ico.__len__()
+for index in range(su):
+    name = "ico" + "_%d" % (index + 1)
+    da[name] = {
+        "value": ico[index]
+    }
 data.update(da)
 
 # count = 0
