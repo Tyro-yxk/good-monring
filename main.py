@@ -130,7 +130,7 @@ for index, aim_city in enumerate(split_city()):
     }
     data.update(da)
 for index, aim_date in enumerate(split_birthday()):
-    key_name = "birthday"
+    key_name = "rec"
     if index != 0:
         key_name = key_name + "_%d" % index
     data[key_name] = {
@@ -142,10 +142,10 @@ for index, aim_start in enumerate(split_start()):
     key_name = "start"
     if index != 0:
         key_name = key_name + "_%d" % index
-        data[key_name] = {  # 多个倒计时纪念
-            "value": get_count(aim_start),
-            "color": get_random_color()
-        }
+    data[key_name] = {  # 多个倒计时纪念
+        "value": get_count(aim_start),
+        "color": get_random_color()
+    }
 
 da = {
     "y_date": {  # 日期，阳历
