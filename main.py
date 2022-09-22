@@ -1,4 +1,4 @@
-import zhdate
+from zhdate import ZhDate
 from datetime import date, datetime
 import math
 from wechatpy import WeChatClient, WeChatClientException
@@ -155,7 +155,7 @@ da = {
         "color": get_random_color()
     },
     "x_date": {  # 农历日期
-        "value": str(zhdate.ZhDate.today()),
+        "value": str(ZhDate.today()),
         "color": get_random_color()
     },
     "weekday": {  # 星期（周三）
