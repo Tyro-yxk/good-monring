@@ -47,8 +47,8 @@ def get_weather(city, he_key):
     if res["code"] != "200":
         print("温度最值获取失败")
     else:
-        max_temp = res["daily"][0]["tempMax"] + u"\N{DEGREE SIGN}" + "C"
-        min_temp = res["daily"][0]["tempMin"] + u"\N{DEGREE SIGN}" + "C"
+        max_temp = res["daily"][0]["tempMax"] 
+        min_temp = res["daily"][0]["tempMin"] 
 
     # 获取空气质量
     url = "https://devapi.qweather.com/v7/air/now?location={}&key={}".format(cityId, he_key)
@@ -70,7 +70,7 @@ def get_weather(city, he_key):
 
     weather = {
         "weather": wea["text"],
-        "temp": wea["temp"] + u"\N{DEGREE SIGN}" + "C",
+        "temp": wea["temp"],
         "wind": wea["windDir"],
         "humidity": wea["humidity"],
         "airQuality": category,
