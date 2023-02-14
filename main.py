@@ -229,15 +229,7 @@ da = {
 }
 data.update(da)
 
-# count = 0
-# for user_id in user_ids:
-#     res = wm.send_template(user_id, template_id, data)
-#     print(data)
-#     count += 1
-# print("发送了" + str(count) + "条消息")
-
 if __name__ == '__main__':
-
     try:
         client = WeChatClient(app_id, app_secret)
     except WeChatClientException as e:
