@@ -177,16 +177,16 @@ for index, aim_city in enumerate(split_city()):
             "value": weather['temp'],
             "color": get_random_color()
         },
-        "hi_%s" % ci_name: {  # 最高温度
-            "value": math.floor(weather['high']),
+        "hi_%s" % ci_name:{  # 最高温度
+            "value": weather['high'],
             "color": get_random_color()
         },
         "lo_%s" % ci_name: {  # 最低温度
-            "value": math.floor(weather['low']),
+            "value": weather['low'],
             "color": get_random_color()
         },
         "pm_%s" % ci_name: {
-            "value": math.floor(weather["p2m5"]),
+            "value": weather["p2m5"],
             "color": get_random_color()
         }
     }
